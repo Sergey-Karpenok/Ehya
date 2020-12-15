@@ -1,0 +1,86 @@
+
+@media screen and ( max-width: 767px )
+
+  .container
+    max-width: 650px
+  .navbar
+    display: none
+    &-menu
+  .header
+    &-button
+      display: none
+  .menu
+    &-button
+      display: flex
+      width: 16px
+      height: 11px
+      padding: 0
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      background-color: white
+      border: none
+      cursor: pointer
+      &__line
+        width: 16px
+        height: 1px
+        background-color: #3A4C66
+  .hero
+    padding-top: 36px
+    padding-left: 28px
+    padding-bottom: 36px
+    &-text
+      margin-bottom: 36px
+      &__title
+        font-size: 48px
+        margin-bottom: 20px
+      &__text
+        max-width: 370px
+        font-size: 18px
+        line-height: 32px
+@media screen and ( max-width: 480px )
+  .container
+    max-width: 320px
+    width: 95%
+  .hero
+    background-image: url(../img/hero-small.jpg)
+    padding-top: 383px
+    padding-left: 20px
+    padding-right: 20px
+    padding-bottom: 36px
+    &-container
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-text
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 24px
+      &__title
+        max-width: 244px
+        font-size: 32px
+        line-height: 40px
+        text-align: center
+      &__text
+        max-width: 250px
+        font-size: 16px
+        line-height: 28px
+        text-align: center
+    &__button
+      max-width: 257px
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 22px
+    &-frame
+      &__item
+        flex-wrap: wrap
+        justify-content: center
+      &__icon
+        width: 24px
+        height: 24px
+      &__text
+        margin-right: 16px
+      &__link
+        margin-right: 16px
+        margin-bottom: 20px
