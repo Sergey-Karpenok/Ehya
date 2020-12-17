@@ -9,6 +9,15 @@
   margin: auto;
 }
 
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../fonts/HKGrotesk-Bold.woff2") format("woff2");
+  src: url("../fonts/HKGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -352,10 +361,6 @@ template {
   display: none;
 }
 
-.header {
-  margin-bottom: 36px;
-}
-
 .header-container {
   position: relative;
   display: -webkit-box;
@@ -367,8 +372,8 @@ template {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 35px;
+  padding-bottom: 50px;
 }
 
 .header-logo {
@@ -398,7 +403,7 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 50px 0 0;
-  min-width: 506px;
+  width: 550px;
   list-style-type: none;
 }
 
@@ -421,9 +426,9 @@ template {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-  padding-top: 62px;
+  padding-top: 70px;
   padding-bottom: 46px;
-  padding-left: 107px;
+  padding-left: 70px;
 }
 
 .hero::befor {
@@ -445,8 +450,7 @@ template {
 
 .hero-text__title {
   max-width: 425px;
-  font-style: normal;
-  font-weight: bold;
+  font-family: 'HK Grotesk';
   font-size: 56px;
   line-height: 68px;
   letter-spacing: 0.2px;
@@ -456,18 +460,19 @@ template {
 }
 
 .hero-text__text {
+  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 36px;
   color: #5A7184;
-  max-width: 560px;
+  max-width: 615px;
   margin: 0;
 }
 
 .hero-text__budjet {
   display: inline-block;
-  margin-bottom: 34px;
+  margin-bottom: 25px;
 }
 
 .hero__button {
@@ -522,6 +527,7 @@ template {
   background-color: #183B56;
   border-radius: 8px;
   border: none;
+  font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
