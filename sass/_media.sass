@@ -1,69 +1,118 @@
-
-@media screen and ( max-width: 767px )
-
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .navbar
+    min-width: 440px
+@media ( max-width: 992px)
+  .container
+    max-width: 700px
+  .hero
+    &-text
+      &__text
+        max-width: 500px
+        font-size: 18px
+        line-height: 32px
+@media screen and ( max-width: 768px )
+  body
+    padding-top: 91px
   .container
     max-width: 650px
+  .header
+    &--mobile
+      &--fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 99
   .navbar
-    display: none
-    &-menu
+    flex-direction: column
+    align-items: center
+    &__item
+      margin-top: 15px
+    &-wrapper
+      display: none
+      position: fixed
+      top: 91px
+      left: 0
+      right: 0
+      bottom: 0
+      &--visible
+        display: block
+        z-index: 4
+        overflow-y: scroll
+        background-color: #E8EAE9
+
+    &__menu
+      &-button
+        display: flex
+        width: 16px
+        height: 11px
+        padding: 0
+        align-items: center
+        justify-content: space-between
+        flex-direction: column
+        background-color: white
+        border: none
+        cursor: pointer
+        &__line
+          width: 16px
+          height: 1px
+          background-color: #3A4C66
   .header
     &-button
       display: none
-  .menu
-    &-button
-      display: flex
-      width: 16px
-      height: 11px
-      padding: 0
-      align-items: center
-      justify-content: space-between
-      flex-direction: column
-      background-color: white
-      border: none
-      cursor: pointer
-      &__line
-        width: 16px
-        height: 1px
-        background-color: #3A4C66
+
   .hero
-    padding-top: 36px
-    padding-left: 28px
+    background-image: url(../img/hero-tablet.jpg)
+    padding-top: 40px
     padding-bottom: 36px
+    padding-left: 0
+    &-frame
+      &__link
+        margin-right: 25px
     &-text
       margin-bottom: 36px
       &__title
         font-size: 48px
+        line-height: 60px
         margin-bottom: 20px
       &__text
         max-width: 370px
         font-size: 18px
         line-height: 32px
+    &__button
+      margin-bottom: 40px
 @media screen and ( max-width: 480px )
   .container
     max-width: 320px
-    width: 95%
+    width: 85%
+  .header
+    &-container
+      padding-top: 30px
   .hero
     background-image: url(../img/hero-small.jpg)
-    padding-top: 383px
-    padding-left: 20px
-    padding-right: 20px
+    background-position: top
+    padding-left: 0
+
     padding-bottom: 36px
     &-container
       display: flex
       flex-direction: column
-      align-items: center
     &-text
       display: flex
       flex-direction: column
-      align-items: center
       margin-bottom: 24px
+      padding-top: 335px
+      &__budjet
+        margin-bottom: 15px
       &__title
         max-width: 244px
         font-size: 32px
         line-height: 40px
         text-align: center
       &__text
-        max-width: 250px
+        width: 270px
         font-size: 16px
         line-height: 28px
         text-align: center

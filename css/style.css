@@ -361,6 +361,10 @@ template {
   display: none;
 }
 
+.header {
+  background-color: #fff;
+}
+
 .header-container {
   position: relative;
   display: -webkit-box;
@@ -403,7 +407,7 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 50px 0 0;
-  width: 550px;
+  min-width: 550px;
   list-style-type: none;
 }
 
@@ -439,7 +443,7 @@ template {
   left: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%);
 }
 
@@ -499,7 +503,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 31px;
+  margin-right: 45px;
 }
 
 .hero-frame__text {
@@ -536,17 +540,67 @@ template {
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .navbar {
+    min-width: 440px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+  .hero-text__text {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 91px;
+  }
   .container {
     max-width: 650px;
   }
+  .header--mobile--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
   .navbar {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .header-button {
-    display: none;
+  .navbar__item {
+    margin-top: 15px;
   }
-  .menu-button {
+  .navbar-wrapper {
+    display: none;
+    position: fixed;
+    top: 91px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .navbar-wrapper--visible {
+    display: block;
+    z-index: 4;
+    overflow-y: scroll;
+    background-color: #E8EAE9;
+  }
+  .navbar__menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -567,21 +621,29 @@ template {
     border: none;
     cursor: pointer;
   }
-  .menu-button__line {
+  .navbar__menu-button__line {
     width: 16px;
     height: 1px;
     background-color: #3A4C66;
   }
+  .header-button {
+    display: none;
+  }
   .hero {
-    padding-top: 36px;
-    padding-left: 28px;
+    background-image: url(../img/hero-tablet.jpg);
+    padding-top: 40px;
     padding-bottom: 36px;
+    padding-left: 0;
+  }
+  .hero-frame__link {
+    margin-right: 25px;
   }
   .hero-text {
     margin-bottom: 36px;
   }
   .hero-text__title {
     font-size: 48px;
+    line-height: 60px;
     margin-bottom: 20px;
   }
   .hero-text__text {
@@ -589,18 +651,23 @@ template {
     font-size: 18px;
     line-height: 32px;
   }
+  .hero__button {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .container {
     max-width: 320px;
-    width: 95%;
+    width: 85%;
+  }
+  .header-container {
+    padding-top: 30px;
   }
   .hero {
     background-image: url(../img/hero-small.jpg);
-    padding-top: 383px;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-position: top;
+    padding-left: 0;
     padding-bottom: 36px;
   }
   .hero-container {
@@ -611,9 +678,6 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .hero-text {
     display: -webkit-box;
@@ -623,10 +687,11 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-bottom: 24px;
+    padding-top: 335px;
+  }
+  .hero-text__budjet {
+    margin-bottom: 15px;
   }
   .hero-text__title {
     max-width: 244px;
@@ -635,7 +700,7 @@ template {
     text-align: center;
   }
   .hero-text__text {
-    max-width: 250px;
+    width: 270px;
     font-size: 16px;
     line-height: 28px;
     text-align: center;
