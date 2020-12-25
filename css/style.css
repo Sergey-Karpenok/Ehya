@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: 'HK Grotesk';
+  font-family: "HK Grotesk", serif;
   src: url("../fonts/HKGrotesk-Bold.woff2") format("woff2");
   src: url("../fonts/HKGrotesk-Bold.woff") format("woff");
   font-weight: bold;
@@ -382,10 +382,10 @@ template {
 
 .header-logo {
   position: absolute;
-  left: 0px;
+  left: 11px;
 }
 
-.header-button {
+.header__button {
   padding: 13px 24px;
   border-radius: 8px;
   border: 2px solid #1565D8;
@@ -399,7 +399,7 @@ template {
   background-color: inherit;
 }
 
-.navbar {
+.navbar__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +420,7 @@ template {
   line-height: 22px;
 }
 
-.navbar__menu-button {
+.menu-button {
   display: none;
 }
 
@@ -454,7 +454,7 @@ template {
 
 .hero-text__title {
   max-width: 425px;
-  font-family: 'HK Grotesk';
+  font-family: "HK Grotesk", serif;
   font-size: 56px;
   line-height: 68px;
   letter-spacing: 0.2px;
@@ -544,7 +544,7 @@ template {
   .container {
     max-width: 960px;
   }
-  .navbar {
+  .navbar__list {
     min-width: 440px;
   }
 }
@@ -566,6 +566,7 @@ template {
   }
   .container {
     max-width: 650px;
+    width: 95%;
   }
   .header--mobile--fixed {
     position: fixed;
@@ -575,6 +576,20 @@ template {
     z-index: 99;
   }
   .navbar {
+    display: none;
+    position: fixed;
+    top: 91px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .navbar--visible {
+    display: block;
+    z-index: 4;
+    overflow-y: scroll;
+    background-color: #E8EAE9;
+  }
+  .navbar__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -586,26 +601,12 @@ template {
   .navbar__item {
     margin-top: 15px;
   }
-  .navbar-wrapper {
-    display: none;
-    position: fixed;
-    top: 91px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .navbar-wrapper--visible {
-    display: block;
-    z-index: 4;
-    overflow-y: scroll;
-    background-color: #E8EAE9;
-  }
-  .navbar__menu-button {
+  .menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 16px;
-    height: 11px;
+    width: 32px;
+    height: 15px;
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -621,12 +622,12 @@ template {
     border: none;
     cursor: pointer;
   }
-  .navbar__menu-button__line {
-    width: 16px;
-    height: 1px;
+  .menu-button__line {
+    width: 22px;
+    height: 2px;
     background-color: #3A4C66;
   }
-  .header-button {
+  .header__button {
     display: none;
   }
   .hero {
@@ -664,11 +665,26 @@ template {
   .header-container {
     padding-top: 30px;
   }
+  .background {
+    background-color: #EEEEEE;
+  }
+  .background::befor {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    background-color: #EEEEEE;
+  }
   .hero {
+    position: relative;
     background-image: url(../img/hero-small.jpg);
     background-position: top;
     padding-left: 0;
-    padding-bottom: 36px;
   }
   .hero-container {
     display: -webkit-box;
@@ -687,11 +703,15 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 24px;
     padding-top: 335px;
   }
   .hero-text__budjet {
     margin-bottom: 15px;
+    display: table;
   }
   .hero-text__title {
     max-width: 244px;
@@ -709,7 +729,7 @@ template {
     max-width: 257px;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 22px;
+    margin: 0 auto 22px auto;
   }
   .hero-frame__item {
     -ms-flex-wrap: wrap;

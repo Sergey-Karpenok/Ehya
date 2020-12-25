@@ -2,7 +2,8 @@
   .container
     max-width: 960px
   .navbar
-    min-width: 440px
+    &__list
+      min-width: 440px
 @media ( max-width: 992px)
   .container
     max-width: 700px
@@ -17,6 +18,7 @@
     padding-top: 91px
   .container
     max-width: 650px
+    width: 95%
   .header
     &--mobile
       &--fixed
@@ -26,41 +28,40 @@
         right: 0
         z-index: 99
   .navbar
-    flex-direction: column
-    align-items: center
+    display: none
+    position: fixed
+    top: 91px
+    left: 0
+    right: 0
+    bottom: 0
+    &--visible
+      display: block
+      z-index: 4
+      overflow-y: scroll
+      background-color: #E8EAE9
+    &__list
+      flex-direction: column
+      align-items: center
     &__item
       margin-top: 15px
-    &-wrapper
-      display: none
-      position: fixed
-      top: 91px
-      left: 0
-      right: 0
-      bottom: 0
-      &--visible
-        display: block
-        z-index: 4
-        overflow-y: scroll
-        background-color: #E8EAE9
-
-    &__menu
-      &-button
-        display: flex
-        width: 16px
-        height: 11px
-        padding: 0
-        align-items: center
-        justify-content: space-between
-        flex-direction: column
-        background-color: white
-        border: none
-        cursor: pointer
-        &__line
-          width: 16px
-          height: 1px
-          background-color: #3A4C66
-  .header
+  .menu
     &-button
+      display: flex
+      width: 32px
+      height: 15px
+      padding: 0
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      background-color: white
+      border: none
+      cursor: pointer
+      &__line
+        width: 22px
+        height: 2px
+        background-color: #3A4C66
+  .header
+    &__button
       display: none
 
   .hero
@@ -90,22 +91,39 @@
   .header
     &-container
       padding-top: 30px
+  .background
+    background-color: #EEEEEE
+    &::befor
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: auto
+      opacity: 0.7
+      background-color: #EEEEEE
+
   .hero
+    position: relative
     background-image: url(../img/hero-small.jpg)
     background-position: top
     padding-left: 0
 
-    padding-bottom: 36px
     &-container
       display: flex
       flex-direction: column
     &-text
       display: flex
       flex-direction: column
+      align-items: center
       margin-bottom: 24px
       padding-top: 335px
+
       &__budjet
         margin-bottom: 15px
+        display: table
       &__title
         max-width: 244px
         font-size: 32px
@@ -120,7 +138,8 @@
       max-width: 257px
       font-size: 16px
       line-height: 22px
-      margin-bottom: 22px
+      margin: 0 auto 22px auto
+
     &-frame
       &__item
         flex-wrap: wrap

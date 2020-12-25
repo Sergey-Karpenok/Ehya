@@ -9,8 +9,8 @@
     padding-bottom: 50px
   &-logo
     position: absolute
-    left: 0px
-  &-button
+    left: 11px
+  &__button
     padding: 13px 24px
     border-radius: 8px
     border: 2px solid #1565D8
@@ -22,11 +22,12 @@
     color: #1565D8
     background-color: inherit
 .navbar
-  display: flex
-  justify-content: space-between
-  margin: 0 50px 0 0
-  min-width: 550px
-  list-style-type: none
+  &__list
+    display: flex
+    justify-content: space-between
+    margin: 0 50px 0 0
+    min-width: 550px
+    list-style-type: none
   &__link
     text-decoration: none
     color: $text-color
@@ -34,6 +35,6 @@
     font-weight: 600
     font-size: 16px
     line-height: 22px
-  &__menu
-    &-button
-      display: none
+.menu
+  &-button
+    display: none
