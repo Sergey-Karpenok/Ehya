@@ -382,7 +382,7 @@ template {
 
 .header-logo {
   position: absolute;
-  left: 11px;
+  left: -5px;
 }
 
 .header__button {
@@ -397,6 +397,15 @@ template {
   line-height: 22px;
   color: #1565D8;
   background-color: inherit;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar__list {
@@ -575,60 +584,86 @@ template {
     right: 0;
     z-index: 99;
   }
+  .header__button {
+    display: none;
+  }
+  .header__button--visible {
+    display: block;
+    padding: 8px 101px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .navbar {
+    height: 322px;
     display: none;
     position: fixed;
-    top: 91px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 10px;
+    left: 8px;
+    right: 8px;
   }
   .navbar--visible {
     display: block;
     z-index: 4;
-    overflow-y: scroll;
-    background-color: #E8EAE9;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16);
   }
   .navbar__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-top: 36px;
+    margin-bottom: 20px;
   }
   .navbar__item {
     margin-top: 15px;
   }
   .menu-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 32px;
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 25px;
     height: 15px;
-    padding: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: white;
+    background-color: #fff;
     border: none;
     cursor: pointer;
   }
   .menu-button__line {
-    width: 22px;
+    display: block;
+    position: absolute;
+    width: 60%;
     height: 2px;
+    opacity: 1;
+    left: 0;
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
     background-color: #3A4C66;
   }
-  .header__button {
-    display: none;
+  .menu-button__line:nth-child(1) {
+    top: 0;
+  }
+  .menu-button__line:nth-child(2) {
+    top: 5px;
+  }
+  .menu-button__line:nth-child(3) {
+    top: 10px;
+  }
+  .menu-button__line--open:nth-child(1) {
+    top: 5px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    width: 60%;
+  }
+  .menu-button__line--open:nth-child(2) {
+    opacity: 0;
+    left: -10px;
+  }
+  .menu-button__line--open:nth-child(3) {
+    width: 60%;
+    top: 5px;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
   }
   .hero {
     background-image: url(../img/hero-tablet.jpg);

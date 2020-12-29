@@ -27,42 +27,69 @@
         left: 0
         right: 0
         z-index: 99
+    &__button
+      display: none
+      &--visible
+        display: block
+        padding: 8px 101px
+        margin-left: auto
+        margin-right: auto
   .navbar
+    height: 322px
     display: none
     position: fixed
-    top: 91px
-    left: 0
-    right: 0
-    bottom: 0
+    top: 10px
+    left: 8px
+    right: 8px
     &--visible
       display: block
       z-index: 4
-      overflow-y: scroll
-      background-color: #E8EAE9
+      background-color: #FFFFFF
+      box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16)
     &__list
       flex-direction: column
-      align-items: center
+      margin-top: 36px
+      margin-bottom: 20px
+
     &__item
       margin-top: 15px
   .menu
     &-button
-      display: flex
-      width: 32px
+      display: block
+      position: relative
+      z-index: 5
+      width: 25px
       height: 15px
-      padding: 0
-      align-items: center
-      justify-content: space-between
-      flex-direction: column
-      background-color: white
+      background-color: #fff
       border: none
       cursor: pointer
       &__line
-        width: 22px
+        display: block
+        position: absolute
+        width: 60%
         height: 2px
+        opacity: 1
+        left: 0
+        transition: .25s ease-in-out
         background-color: #3A4C66
-  .header
-    &__button
-      display: none
+        &:nth-child(1)
+          top: 0
+        &:nth-child(2)
+          top: 5px
+        &:nth-child(3)
+          top: 10px
+        &--open
+          &:nth-child(1)
+            top: 5px
+            transform: rotate(135deg)
+            width: 60%
+          &:nth-child(2)
+            opacity: 0
+            left: -10px
+          &:nth-child(3)
+            width: 60%
+            top: 5px
+            transform: rotate(-135deg)
 
   .hero
     background-image: url(../img/hero-tablet.jpg)
