@@ -4,6 +4,16 @@
   .navbar
     &__list
       min-width: 440px
+  .collection
+    &-wrapper
+      flex-wrap: wrap
+      justify-content: center
+    &__content
+      max-width: 670px
+    &__card
+      margin-bottom: 40px
+    &__content
+      margin-left: 0
 @media ( max-width: 992px)
   .container
     max-width: 700px
@@ -13,11 +23,12 @@
         max-width: 500px
         font-size: 18px
         line-height: 32px
+
 @media screen and ( max-width: 768px )
   body
     padding-top: 91px
   .container
-    max-width: 650px
+    // max-width: 650px
     width: 95%
   .header
     &--mobile
@@ -90,7 +101,6 @@
             width: 60%
             top: 5px
             transform: rotate(-135deg)
-
   .hero
     background-image: url(../img/hero-tablet.jpg)
     padding-top: 40px
@@ -111,6 +121,10 @@
         line-height: 32px
     &__button
       margin-bottom: 40px
+  .collection
+    padding-top: 80px
+    padding-bottom: 40px
+
 @media screen and ( max-width: 480px )
   .container
     max-width: 320px
@@ -179,3 +193,30 @@
       &__link
         margin-right: 16px
         margin-bottom: 20px
+  .collection
+    &__card
+      margin: 0
+      margin-bottom: 14px
+      flex-direction: row
+      min-width: 290px
+    &__title
+      font-size: 28px
+      line-height: 36px
+      text-align: center
+      margin-bottom: 20px
+    &__text
+      font-size: 16px
+      line-height: 28px
+      text-align: center
+    &__link
+      display: none
+    &__ico
+      display: none
+  .img-big
+    width: 290px
+    height: 300px
+    object-fit: cover
+  .img-small
+    width: 138px
+    height: 97px
+    object-fit: cover
