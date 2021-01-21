@@ -23,6 +23,17 @@
         max-width: 500px
         font-size: 18px
         line-height: 32px
+  .trends
+    max-width: 608px
+    margin-left: auto
+    margin-right: auto
+    &-header
+      flex-direction: column
+      padding-bottom: 55px
+    &__title
+      margin-bottom: 25px
+    &-body
+      justify-content: space-around
 
 @media screen and ( max-width: 768px )
   body
@@ -128,7 +139,7 @@
 @media screen and ( max-width: 480px )
   .container
     max-width: 320px
-    width: 85%
+    width: 95%
   .header
     &-container
       padding-top: 30px
@@ -145,13 +156,11 @@
       height: auto
       opacity: 0.7
       background-color: #EEEEEE
-
   .hero
     position: relative
     background-image: url(../img/hero-small.jpg)
     background-position: top
     padding-left: 0
-
     &-container
       display: flex
       flex-direction: column
@@ -161,7 +170,6 @@
       align-items: center
       margin-bottom: 24px
       padding-top: 335px
-
       &__budjet
         margin-bottom: 15px
         display: table
@@ -180,7 +188,6 @@
       font-size: 16px
       line-height: 22px
       margin: 0 auto 22px auto
-
     &-frame
       &__item
         flex-wrap: wrap
@@ -220,3 +227,34 @@
     width: 138px
     height: 97px
     object-fit: cover
+  .trends
+    &__title
+      font-size: 28px
+      line-height: 36px
+    &-navbar
+      &__link
+        font-size: 16px
+        line-height: 22px
+    &-card
+      &__img
+        width: 140px
+        height: 170px
+      &__title
+        margin-left: 0
+        font-size: 16px
+        line-height: 20px
+      &__order
+        justify-content: start
+        margin-left: 0
+      &__price
+        margin-right: 10px
+    &-newcard
+      width: 140px
+      height: 170px
+      padding: 0 10px 0 10px
+      &__text
+        font-size: 17px
+        line-height: 20px
+      &__link
+        width: 25px
+        height: 32px
