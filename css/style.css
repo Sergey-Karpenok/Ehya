@@ -1087,7 +1087,9 @@ template {
 
 .testimonial-carousell {
   max-width: 800px;
-  margin: 145px auto 0;
+  margin: auto;
+  padding-top: 145px;
+  padding-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1148,5 +1150,86 @@ template {
   text-align: center;
   letter-spacing: 0.133333px;
   color: #183B56;
+}
+
+.history {
+  padding-bottom: 140px;
+}
+
+.history__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.history__about {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.history__button {
+  margin-right: 22px;
+}
+
+.history__budjet {
+  position: relative;
+  top: -15px;
+}
+
+.history__title {
+  margin: 0 0 24px 0;
+  max-width: 340px;
+}
+
+.history__subtitle {
+  margin: 0 0 42px 0;
+  max-width: 300px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #FAFDFF;
+}
+
+.history-item {
+  position: relative;
+}
+
+.history-item__card {
+  position: absolute;
+  background: #FAFDFF;
+  bottom: -105px;
+  left: 30px;
+  width: 95%;
+}
+
+.history-item__img {
+  margin-left: 20px;
+}
+
+.history-item__text {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  color: #183B56;
+  padding: 10px 20px;
+}
+
+.history-item__link {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #1565D8;
+  padding-left: 20px;
 }
 /*# sourceMappingURL=style.css.map */
