@@ -1250,7 +1250,7 @@ template {
   mix-blend-mode: normal;
   opacity: 0.4;
   top: -200%;
-  left: -50%;
+  left: -30%;
 }
 
 .subscribe__bg--left:after {
@@ -1263,7 +1263,7 @@ template {
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
   top: 15%;
-  left: 15%;
+  left: 10%;
 }
 
 .subscribe__bg--right {
@@ -1278,7 +1278,7 @@ template {
   mix-blend-mode: normal;
   opacity: 0.4;
   bottom: -200%;
-  right: -50%;
+  right: -30%;
 }
 
 .subscribe__bg--right:after {
@@ -1291,7 +1291,7 @@ template {
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
   bottom: 15%;
-  right: 15%;
+  right: 10%;
 }
 
 .subscribe__row {
