@@ -372,3 +372,58 @@
         display: none
     &__subtitle
       max-width: 100%
+
+// Медиа запрос для спойлеров
+
+@media screen and ( max-width: 480px )
+  .footer
+    &__row
+      justify-content: start
+    &__column
+      position: relative
+      &:nth-child(1)
+        order: 10
+    &__title
+      background-color: #1565D8
+      opacity: 0.7
+      border-radius: 5px
+      width: 253px
+      color: white
+      padding-left: 10px
+      margin: 0 0 15px 0
+      &::before
+        content: ''
+        width: 16px
+        height: 2px
+        background-color: #fff
+        position: absolute
+        right: -94px
+        top: 12px
+      &::after
+        content: ''
+        width: 2px
+        height: 16px
+        background-color: #fff
+        position: absolute
+        right: -87px
+        top: 5px
+      &--active
+
+    &__ul
+      display: none
+      &--active
+        display: block
+    &__link
+      margin-bottom: 15px
+      margin-left: 10px
+    &__logo
+      display: block
+      margin: 60px auto 15px auto
+    &__subtitle
+      text-align: center
+      margin-bottom: 15px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      margin: 0 auto 0 auto
+      width: 80%
