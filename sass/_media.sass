@@ -341,8 +341,12 @@
         display: none
     &__subtitle
       max-width: 100%
+    &-slide
+      &__wrapper
+        flex-direction: column
+        height: 780px
     &-item
-      margin-bottom: 115px
+      margin-bottom: 15px
       &__img
         width: 270px
         height: 277px
@@ -362,6 +366,7 @@
       top: 78px
       right: 0
       height: 100%
+      width: 100%
 @media screen and ( max-height: 375px)
   .history
     &__title
@@ -391,7 +396,8 @@
       color: white
       padding-left: 10px
       margin: 0 0 15px 0
-      &::before
+      cursor: pointer
+      &::before, &::after
         content: ''
         width: 16px
         height: 2px
@@ -399,16 +405,12 @@
         position: absolute
         right: -94px
         top: 12px
+        transition: transform 0.3s ease 0s
       &::after
-        content: ''
-        width: 2px
-        height: 16px
-        background-color: #fff
-        position: absolute
-        right: -87px
-        top: 5px
+        transform: rotate(-90deg)
       &--active
-
+        &::after
+          transform: rotate(0deg)
     &__ul
       display: none
       &--active

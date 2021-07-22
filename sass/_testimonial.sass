@@ -14,13 +14,20 @@
       margin-top: 80px
       position: relative
       border: 1px solid #E5EAF4
+    &__pagination
+      display: flex
+      flex-direction: row
     &__dot
-      width: 10px
-      height: 10px
-      background: #B3BAC5
-      border-radius: 2.5px
+      list-style: none
+      margin: 0 5px
+      width: 20px
+      height: 20px
+      background-color: #B3BAC5
+      border-radius: 50%
       &--active
-        background: $text-color
+        background-color: #183B56
+        transition: all 200ms ease-out
+
   &-slide
     display: none
     &--active
@@ -28,6 +35,9 @@
       align-items: center
       justify-content: center
       flex-direction: column
+      opacity: 1 !important
+      -webkit-transition: opacity 0.5s
+      transition: opacity 0.5s !important
     &__icon
       height: 80px
       width: 70px

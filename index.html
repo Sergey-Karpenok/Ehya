@@ -18,16 +18,16 @@
                 <nav class="navbar">
                     <ul class="navbar__list">
                         <li class="navbar__item">
-                            <a href="#" class="navbar__link">Главная</a>
+                            <a href="#hero" class="navbar__link">Главная</a>
                         </li>
                         <li class="navbar__item">
-                            <a href="#" class="navbar__link">Новинки</a>
+                            <a href="#collection" class="navbar__link">Новинки</a>
                         </li>
                         <li class="navbar__item">
-                            <a href="#" class="navbar__link">Тренды</a>
+                            <a href="#trends" class="navbar__link">Тренды</a>
                         </li>
                         <li class="navbar__item">
-                            <a href="#" class="navbar__link">Отзывы</a>
+                            <a href="#testimonial" class="navbar__link">Отзывы</a>
                         </li>
                         <li class="navbar__item">
                             <a href="#" class="navbar__link">Контакты</a>
@@ -47,7 +47,7 @@
         <!-- /.container -->
     </header>
     <!-- /.header -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <div class="hero-container">
                 <div class="hero-text">
@@ -73,7 +73,7 @@
         <!-- /.container -->
     </section>
 
-    <section class="collection">
+    <section class="collection" id="collection">
         <div class="container">
             <div class="collection-wrapper">
                 <div class="collection__card">
@@ -94,7 +94,7 @@
         </div>
     </section>
     <!-- /.collection -->
-    <section class="trends">
+    <section class="trends" id="trends">
         <div class="container">
             <div class="trends-header">
                 <h2 class="title trends__title">Тренды</h2>
@@ -181,7 +181,7 @@
         <!-- /.container -->
     </section>
     <!-- /.trends -->
-    <section class="testimonial">
+    <section class="testimonial" id="testimonial">
         <div class="container">
             <div class="testimonial-carousell">
                 <div class="testimonial-slide testimonial-slide--active">
@@ -203,53 +203,63 @@
                     <h3 class="testimonial-slide__author">Виктория Путимцева - клиент Fashun</h3>
                 </div>
                 <div class="testimonial-carousell__pagination">
-                    <img src="./img/Carousell/dot.png" alt="dot" class="testimonial-carousell__dot testimonial-carousell__dot--active">
-                    <img src="./img/Carousell/dot.png" alt="dot" class="testimonial-carousell__dot">
-                    <img src="./img/Carousell/dot.png" alt="dot" class="testimonial-carousell__dot">
+                    <li class="testimonial-carousell__dot testimonial-carousell__dot--active"></li>
+                    <li class="testimonial-carousell__dot"></li>
+                    <li class="testimonial-carousell__dot"></li>
                 </div>
+                <!-- /.testimonial-carousell -->
             </div>
-            <!-- /.testimonial-carousell -->
-        </div>
-        <!-- /.container -->
+            <!-- /.container -->
     </section>
     <!-- /.testimonial -->
     <section class="history">
         <div class="container">
             <div class="history__row">
                 <div class="history__column history__about">
-
                     <span class="budjet history__budjet">ИСТОРИИ</span>
                     <h2 class="title history__title">
                         <p>Это </p>История Fashun</h2>
                     <p class="history__subtitle">Ознакомьтесь с нашим рассказом о моде. Написано нашим дизайнером и специалистом.</p>
                     <div class="history__button-wrapper">
-                        <img src="./img/history/Button_left.svg" alt="Left" class="history__button">
-                        <img src="./img/history/Button_right.svg" alt="Right" class="history__button">
+                        <img src="./img/history/Button_left.svg" alt="Left" class="history__button button-left">
+                        <img src="./img/history/Button_right.svg" alt="Right" class="history__button button-right">
                     </div>
 
                 </div>
-                <div class="history__column">
-                    <div class="history-item">
-                        <img class="history-item__img" src="./img/history/Shape1.png" alt="Shape">
-                        <div class="history-item__card">
-                            <div class="history-item__text">Mix & Match Style 01: повседневный и формальный стиль</div>
-                            <a href="#" class="history-item__link">Читать далее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="history__column">
-                    <div class="history-item">
-                        <img class="history-item__img" src="./img/history/Shape2.png" alt="Shape">
-                        <div class="history-item__card">
-                            <div class="history-item__text">Лайфхак: Купите одежду Thrifft на воскресном рынке
+                <div class="history__column history-slide">
+                    <div class="history-slide__wrapper">
+                        <div class="history__slide">
+                            <div class="history-item">
+                                <img class="history-item__img" src="./img/history/Shape1.png" alt="Shape">
+                                <div class="history-item__card">
+                                    <div class="history-item__text">Mix & Match Style 01: повседневный и формальный стиль</div>
+                                    <a href="#" class="history-item__link">Читать далее</a>
+                                </div>
                             </div>
-                            <a href="#" class="history-item__link">Читать далее</a>
+                        </div>
+                        <div class="history__slide">
+                            <div class="history-item">
+                                <img class="history-item__img" src="./img/history/Shape2.png" alt="Shape">
+                                <div class="history-item__card">
+                                    <div class="history-item__text">Лайфхак: Купите одежду Thrifft на воскресном рынке
+                                    </div>
+                                    <a href="#" class="history-item__link">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__slide">
+                            <div class="history-item">
+                                <img class="history-item__img" src="./img/history/Shape1.png" alt="Shape">
+                                <div class="history-item__card">
+                                    <div class="history-item__text">Mix & Match Style 02: строгий стиль</div>
+                                    <a href="#" class="history-item__link">Читать далее</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /.container -->
+            <!-- /.container -->
     </section>
     <!-- /.history -->
     <section class="subscribe">
@@ -282,18 +292,11 @@
                     </img>
                     <p class="footer__subtitle">Интернет-магазин брендовой одежды с оплатой онлайн</p>
                     <div class="footer__wrapper">
-                        <img src="./img/footer/google.svg" alt="" class="footer__social-links">
-                        <a href="#"></a>
-                        </img>
-                        <img src="./img/footer/tw.svg" alt="" class="footer__social-links">
-                        <a href="#"></a>
-                        </img>
-                        <img src="./img/footer/inst.svg" alt="" class="footer__social-links">
-                        <a href="#"></a>
-                        </img>
-                        <img src="./img/footer/in.svg" alt="" class="footer__social-links">
-                        <a href="#"></a>
-                        </img>
+
+                        <a href="#"><img src="./img/footer/google.svg" alt="" class="footer__social-links"></a>
+                        <a href="#"><img src="./img/footer/tw.svg" alt="" class="footer__social-links"></a>
+                        <a href="#"><img src="./img/footer/inst.svg" alt="" class="footer__social-links"></a>
+                        <a href="#"><img src="./img/footer/in.svg" alt="" class="footer__social-links"></a>
                     </div>
                 </div>
                 <div class="footer__column">
@@ -318,7 +321,7 @@
                 </div>
                 <div class="footer__column">
                     <h3 class="footer__title">Сервисы</h3>
-                    <ul class="footer__ul footer__ul--active">
+                    <ul class="footer__ul">
                         <li class="footer__link">
                             <a href="#">Рассрочка на 6 мес</a>
                         </li>
